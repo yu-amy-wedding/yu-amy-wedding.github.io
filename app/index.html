@@ -34,7 +34,7 @@
       <p class="layout-rsvp text-center">
         <img src="images/rsvp.png">
       </p>
-      <div class="row layout-rsvp-form">
+      <div class="row layout-rsvp-form" ng-controller="FormCtrl as vm">
         <form action="https://docs.google.com/forms/d/1eW85Lez3glZAXvjIUzxcC9pQEtKPVbZDpNp5Xd3Iwos/formResponse"
               method="POST"
               class="col-md-4 col-md-offset-4 form-bg form-position">
@@ -124,6 +124,7 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/ngUpload/ng-upload.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
