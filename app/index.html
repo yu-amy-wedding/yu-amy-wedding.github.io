@@ -30,11 +30,87 @@
     </nav>
 
     <div class="container-fluid" style="padding: 0">
-      <img src="images/jumbotron.jpg" style="width: 100%;">
-    </div>
-
-    <div class="container">
-      <div ng-view=""></div>
+      <img src="images/jumbotron.jpg" class="main-image">
+      <p class="layout-rsvp text-center">
+        <img src="images/rsvp.png">
+      </p>
+      <div class="row layout-rsvp-form">
+        <form action="https://docs.google.com/forms/d/1eW85Lez3glZAXvjIUzxcC9pQEtKPVbZDpNp5Xd3Iwos/formResponse"
+              method="POST"
+              class="col-md-4 col-md-offset-4 form-bg form-position">
+            <div class="form-group">
+              <label for="form-name-input">敢問英雄貴姓大名？ <span></span></label>
+              <input type="text" class="form-control" id="form-name-input"
+                     placeholder="" name="entry.524503362">
+            </div>
+            <div class="form-group">
+              <label for="form-phone-input">電話</label>
+              <input type="text" class="form-control" id="form-phone-input"
+                     placeholder="" name="entry.1148070401">
+            </div>
+            <div class="form-group">
+              <label>是否出席？</label><br>
+              <label class="radio-inline">
+                <input type="radio" name="entry.1255396603" value="是"> 是
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="entry.1255396603" value="禮到人不到"> 禮到人不到
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="entry.1255396603" value="否"> 否
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="form-carnivore-input">葷食人數</label>
+              <input type="number" class="form-control" id="form-carnivore-input"
+                     value="0" name="entry.1569189985" step="any" min="0">
+            </div>
+            <div class="form-group">
+              <label for="form-vegetarian-input">素食人數</label>
+              <input type="number" class="form-control" id="form-vegetarian-input"
+                     value="0" name="entry.1171556348" step="any" min="0">
+            </div>
+            <div class="form-group">
+              <label>出席人數</label>
+              <p class="form-control-static">0</p>
+              <input type="hidden" name="entry.1613905738" value="0">
+            </div>
+            <div class="form-group">
+              <label for="form-email-input">如果你需要電子喜帖，請填 email</label>
+              <input type="email" class="form-control" id="form-email-input"
+                     value="" name="entry.275160557">
+            </div>
+            <div class="form-group">
+              <label for="form-address-input">如果你需要紙本喜帖，請填地址</label>
+              <input type="text" class="form-control" id="form-address-input"
+                     value="" name="entry.2065599770">
+            </div>
+            <div class="form-group">
+              <label>Yu's friend or Amy's?</label><br>
+              <label class="radio-inline">
+                <input type="radio" name="entry.1863114941" value="Yu"> Yu
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="entry.1863114941" value="Amy"> Amy
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="entry.1863114941" value="Both"> Both
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="form-childseat-input">需要兒童座椅嗎？</label>
+              <input type="number" class="form-control" id="form-childseat-input"
+                     value="0" name="entry.329710443" step="any" min="0">
+            </div>
+            <div class="form-group">
+              <label for="form-blessing-input">祝福的話</label>
+              <textarea class="form-control" id="form-blessing-input" name="entry.519644995"></textarea>
+            </div>
+            <div class="text-center">
+              <button class="btn btn-lg btn-success">Send</button>
+            </div>
+          </form>
+        </div>
     </div>
 
     <!-- build:js(.) scripts/vendor.js -->
