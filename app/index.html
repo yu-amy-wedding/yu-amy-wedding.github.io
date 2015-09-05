@@ -2,9 +2,10 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Yu &amp; Amy's Wedding</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -21,16 +22,13 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <nav class="navbar navbar-default navbar-color navbar-volume navbar-fixed-top">
-      <div class="container-fluid">
-        <p class="text-center is-relative navbar-logo">
-          <img class="navbar-logo-image" alt="Yu &amp; Amy's Wedding" src="images/logo.png">
-        </p>
-      </div>
-    </nav>
-
     <div class="container-fluid" style="padding: 0">
-      <img src="images/jumbotron.jpg" class="main-image">
+      <span class="is-absolute logo">
+        <img src="images/logo.png" class="logo-image">
+      </span>
+      <p class="text-center">
+        <img src="images/jumbotron.jpg" class="main-image">
+      </p>
       <p class="layout-rsvp text-center">
         <img src="images/rsvp.png">
       </p>
@@ -152,6 +150,7 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/responsive.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/form.js"></script>
         <!-- endbuild -->
