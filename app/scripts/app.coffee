@@ -15,5 +15,6 @@ angular
     'ngMessages',
     'ngResource',
     'ngRoute',
-    'ngTouch'
+    'ngTouch',
+    'ngUpload'
   ]
