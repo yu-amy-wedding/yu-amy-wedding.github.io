@@ -14,6 +14,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/layout-album.css">
     <!-- endbuild -->
   </head>
   <body ng-app="yuAmyWeddinggithubioApp">
@@ -65,15 +66,16 @@
       <div class="layout-rsvp text-center">
         <strong>RSVP</strong>
       </div>
-      <div class="row layout-rsvp-form" ng-controller="FormCtrl as vm">
-        <div class="col-md-4 col-md-offset-4">
-          <div class="panel panel-default" id="rsvp-form">
-            <div class="panel-body">
-              <form action="https://docs.google.com/forms/d/1eW85Lez3glZAXvjIUzxcC9pQEtKPVbZDpNp5Xd3Iwos/formResponse"
-                    method="POST"
-                    ng-upload="vm.onSubmitForm(content)"
-                    upload-options-before-submit="vm.beforeSubmitForm()"
-                    error-catcher="vm.onSubmitFormError(error)">
+      <div class="layout-rsvp-form" ng-controller="FormCtrl as vm">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default" id="rsvp-form">
+              <div class="panel-body">
+                <form action="https://docs.google.com/forms/d/1eW85Lez3glZAXvjIUzxcC9pQEtKPVbZDpNp5Xd3Iwos/formResponse"
+                      method="POST"
+                      ng-upload="vm.onSubmitForm(content)"
+                      upload-options-before-submit="vm.beforeSubmitForm()"
+                      error-catcher="vm.onSubmitFormError(error)">
                   <div class="form-group" id="name-form-group"
                        ng-class="{'has-error': vm.hasNameError, 'has-feedback': vm.hasNameError}">
                     <label class="control-label" for="form-name-input">敢問英雄貴姓大名？</label>
@@ -170,6 +172,40 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="layout-album">
+        <p class="text-center" style="font-family: Peas-Carrots; font-size: 2.5em">ALBUMS</p>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <a>
+                <img src="images/album-cover-1.jpg">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <a>
+                <img src="images/album-cover-2.jpg">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <a>
+                <img src="images/album-cover-3.jpg">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <a>
+                <img src="images/album-cover-4.jpg">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- build:js(.) scripts/vendor.js -->
