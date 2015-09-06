@@ -15,16 +15,6 @@ angular
     'ngMessages',
     'ngResource',
     'ngRoute',
-    'ngTouch'
+    'ngTouch',
+    'ngUpload'
   ]
-  .config ($routeProvider) ->
-    $routeProvider
-      .when '/',
-        templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
-      .when '/about',
-        templateUrl: 'views/about.html'
-        controller: 'AboutCtrl'
-      .otherwise
-        redirectTo: '/'
-
