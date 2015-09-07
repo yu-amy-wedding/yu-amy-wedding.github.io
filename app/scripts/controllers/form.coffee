@@ -1,6 +1,6 @@
 angular
     .module 'yuAmyWeddinggithubioApp'
-    .controller 'FormCtrl', ($timeout, $location, $anchorScroll, $window) ->
+    .controller 'FormCtrl', ($timeout, $anchorScroll, $window) ->
         vm = @
 
         WILL_ATTEND = 'yes'
@@ -45,17 +45,19 @@ angular
 
             $timeout ->
 
+                target = null
+
                 if vm.hasChildSeatCountError = hasChildSeatCountError
-                    $location.hash('child-seat-form-group')
+                    target = 'child-seat-form-group'
 
                 if vm.hasAttendeeCountError = hasAttendeeCountError
-                    $location.hash('attendee-form-group')
+                    target = 'attendee-form-group'
 
                 if vm.hasNameError = hasNameError
-                    $location.hash('name-form-group')
+                    target = 'name-form-group'
 
-                if hasNameError || hasAttendeeCountError || hasChildSeatCountError
-                    $anchorScroll()
+                if target
+                    $anchorScroll(target)
 
             !hasNameError && !hasAttendeeCountError && !hasChildSeatCountError
 
