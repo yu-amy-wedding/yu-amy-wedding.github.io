@@ -24,7 +24,9 @@ body, h1, h2, h3, h4, h5, h6
     margin-left: 0
 
 .layout-jumbotron
-  min-height: 768px
+  @media screen and (max-width: 767px)
+    min-height: 768px
+
   width: 100%
   overflow: hidden
 
@@ -43,6 +45,13 @@ body, h1, h2, h3, h4, h5, h6
 
   @media screen and (min-width: 767px)
     width: 100%
+
+#save-the-date
+  max-width: 80%
+  left: 50%
+  transform: translate(-50%, -50%)
+  top: 50%
+  z-index: 1024
 
 .layout-info
   position: relative
