@@ -24,8 +24,6 @@ body, h1, h2, h3, h4, h5, h6
     margin-left: 0
 
 .layout-jumbotron
-  min-height: 768px
-  width: 100%
   overflow: hidden
 
 .logo
@@ -38,11 +36,21 @@ body, h1, h2, h3, h4, h5, h6
   left: 50%
   transform: translateX(-50%)
 
+  @media screen and (min-width: 768px)
+    height: 1024px
+
   @media screen and (max-width: 767px)
     height: 768px
 
-  @media screen and (min-width: 767px)
-    width: 100%
+  @media screen and (max-width: 320px)
+    height: 568px
+
+#save-the-date
+  max-width: 80%
+  left: 50%
+  transform: translate(-50%, -50%)
+  top: 40%
+  z-index: 1024
 
 .layout-info
   position: relative
