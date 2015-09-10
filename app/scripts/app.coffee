@@ -8,13 +8,4 @@
  #
  # Main module of the application.
 ###
-angular
-  .module 'yuAmyWeddinggithubioApp', [
-    'ngAnimate',
-    'ngAria',
-    'ngMessages',
-    'ngResource',
-    'ngRoute',
-    'ngTouch',
-    'ngUpload'
-  ]
+angular.module 'yuAmyWeddinggithubioApp', ['ngUpload']

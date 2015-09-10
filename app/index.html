@@ -14,8 +14,10 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/layout-album.css">
     <!-- endbuild -->
+    <style>
+      .layout-album{background-color:#fff;background-image:url(images/brick-pattern.jpg);background-repeat:repeat;background-position:center top;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(255,255,255,1)),color-stop(10%,rgba(255,255,255,0))),color-stop(100%,rgba(255,255,255,0))),url(images/brick-pattern.jpg);background-image:-webkit-linear-gradient(top,rgba(255,255,255,1) 0,rgba(255,255,255,1) 10%,rgba(255,255,255,0) 100%),url(images/brick-pattern.jpg);background-image:-moz-linear-gradient(top,rgba(255,255,255,1) 0,rgba(255,255,255,1) 10%,rgba(255,255,255,0) 100%),url(images/brick-pattern.jpg);background-image:-ms-linear-gradient(top,rgba(255,255,255,1) 0,rgba(255,255,255,1) 10%,rgba(255,255,255,0) 100%),url(images/brick-pattern.jpg);background-image:-o-linear-gradient(top,rgba(255,255,255,1) 0,rgba(255,255,255,1) 10%,rgba(255,255,255,0) 100%),url(images/brick-pattern.jpg);background-image:linear-gradient(top bottom,rgba(255,255,255,1) 0,rgba(255,255,255,1) 10%,rgba(255,255,255,0) 100%),url(images/brick-pattern.jpg);padding:6em 0 10em}
+    </style>
   </head>
   <body ng-app="yuAmyWeddinggithubioApp">
     <!--[if lt IE 7]>
@@ -30,7 +32,7 @@
         </span>
         <img src="images/save-the-date.png" class="is-absolute" id="save-the-date"
              data-top-top="top: 40%; opacity: 1"
-             data-top-center="top: -50%; opacity: 0"
+             data-top-center="top: 10%; opacity: 0"
              data-anchor-target=".layout-jumbotron">
         <img src="images/jumbotron.jpg" class="is-relative" id="main-image">
       </div>
@@ -111,19 +113,28 @@
                            placeholder="" name="entry.1148070401" ng-model="vm.phone">
                   </div>
                   <div class="form-group">
-                    <label>是否出席？</label><br>
-                    <label class="radio-inline">
-                      <input type="radio" name="entry.1255396603" value="yes"
-                             ng-model="vm.mayAttend" ng-change="vm.onAttendStatusChanged()"> 是
-                    </label>
-                    <label class="radio-inline">
-                      <input type="radio" name="entry.1255396603" value="no but has gift"
-                             ng-model="vm.mayAttend" ng-change="vm.onAttendStatusChanged()"> 禮到人不到
-                    </label>
-                    <label class="radio-inline">
-                      <input type="radio" name="entry.1255396603" value="no"
-                             ng-model="vm.mayAttend" ng-change="vm.onAttendStatusChanged()"> 否
-                    </label>
+                    <label>10/31 是否有幸邀請您大駕光臨？</label>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="entry.1255396603" value="yes"
+                             ng-model="vm.mayAttend" ng-change="vm.onAttendStatusChanged()">
+                        一定捧場
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="entry.1255396603" value="no but has gift"
+                               ng-model="vm.mayAttend" ng-change="vm.onAttendStatusChanged()">
+                        禮到人不到
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="entry.1255396603" value="no"
+                               ng-model="vm.mayAttend" ng-change="vm.onAttendStatusChanged()">
+                        祝你們福如東海，壽比南山，天長地久，早生貴子，闔家萬事興，我就不出席了
+                      </label>
+                    </div>
                   </div>
                   <div ng-show="vm.willAttend()">
                     <div class="form-group" id="attendee-form-group"
@@ -215,15 +226,7 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-aria/angular-aria.js"></script>
-    <script src="bower_components/angular-messages/angular-messages.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/ngUpload/ng-upload.js"></script>
     <script src="bower_components/skrollr/src/skrollr.js"></script>
     <!-- endbower -->
