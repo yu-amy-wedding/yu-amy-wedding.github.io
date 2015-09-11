@@ -179,6 +179,11 @@
                     <textarea class="form-control" id="form-blessing-input" name="entry.519644995"
                               ng-model="vm.blessing"></textarea>
                   </div>
+                  <div class="alert alert-danger" role="alert" ng-show="vm.errorMessages.length > 0">
+                    <ul>
+                      <li ng-bind="err" ng-repeat="err in vm.errorMessages"></li>
+                    </ul>
+                  </div>
                   <div class="text-center">
                     <input type="submit" class="btn btn-lg btn-success" value="Send"
                            ng-disabled="$isUploading">
@@ -228,6 +233,7 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/ngUpload/ng-upload.js"></script>
     <script src="bower_components/skrollr/src/skrollr.js"></script>
     <!-- endbower -->
