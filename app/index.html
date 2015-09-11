@@ -226,6 +226,7 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/ngUpload/ng-upload.js"></script>
     <script src="bower_components/skrollr/src/skrollr.js"></script>
@@ -239,6 +240,7 @@
 
     <script>
       skrollr.init({forceHeight: false});
+      $(window).on('load', function() { skrollr.get().refresh(); });
     </script>
 </body>
 </html>
