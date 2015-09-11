@@ -80,4 +80,10 @@ angular
 
             vm.onSubmitForm()
 
+        vm.checkInteger = (val) ->
+
+            parsed = parseInt(val, 10) || 0
+            parsed = 0 if parsed < 0
+            parsed
+
         vm.init()
