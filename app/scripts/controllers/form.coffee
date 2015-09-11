@@ -26,6 +26,8 @@ angular
             vm.hasNameError = false
             vm.hasAttendeeCountError = false
             vm.hasChildSeatCountError = false
+            vm.errorMessages = []
+            return
 
         vm.willAttend = ->
 
@@ -46,15 +48,19 @@ angular
             $timeout ->
 
                 target = null
+                vm.errorMessages = []
 
                 if vm.hasChildSeatCountError = hasChildSeatCountError
                     target = 'child-seat-form-group'
+                    vm.errorMessages.push '兒童座椅個數怎麼比出席人數還多？'
 
                 if vm.hasAttendeeCountError = hasAttendeeCountError
                     target = 'attendee-form-group'
+                    vm.errorMessages.push '沒有填出席人數喔'
 
                 if vm.hasNameError = hasNameError
                     target = 'name-form-group'
+                    vm.errorMessages.push '這位英雄你的大名咧？'
 
                 if target
                     $anchorScroll(target)
