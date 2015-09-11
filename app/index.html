@@ -142,18 +142,21 @@
                       <label class="control-label" for="form-carnivore-input">葷食人數</label>
                       <input type="number" class="form-control" id="form-carnivore-input"
                              name="entry.1569189985" step="any" min="0"
+                             ng-change="vm.carnivoreCount = vm.checkInteger(vm.carnivoreCount)"
                              ng-model="vm.carnivoreCount">
                     </div>
                     <div class="form-group" ng-class="{'has-error': vm.hasAttendeeCountError}">
                       <label class="control-label" for="form-vegetarian-input">素食人數</label>
                       <input type="number" class="form-control" id="form-vegetarian-input"
                              name="entry.1171556348" step="any" min="0"
+                             ng-change="vm.vegetarianCount = vm.checkInteger(vm.vegetarianCount)"
                              ng-model="vm.vegetarianCount">
                     </div>
                     <div class="form-group" ng-class="{'has-error': vm.hasChildSeatCountError}">
                       <label class="control-label" for="form-childseat-input">需要兒童座椅嗎？</label>
                       <input type="number" class="form-control" id="form-childseat-input"
                              name="entry.329710443" step="any" min="0"
+                             ng-change="vm.childSeatCount = vm.checkInteger(vm.childSeatCount)"
                              ng-model="vm.childSeatCount">
                     </div>
                     <div class="form-group">
